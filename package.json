@@ -1,0 +1,43 @@
+{
+  "name": "@jkt48connect-corp/sdk",
+  "version": "1.0.0",
+  "description": "Official SDK for JKT48Connect API v2",
+  "main": "dist/index.cjs",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "jkt48",
+    "jkt48connect",
+    "api",
+    "sdk",
+    "idol"
+  ],
+  "author": "JKT48Connect Corp",
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^15.0.0",
+    "@rollup/plugin-commonjs": "^24.0.0",
+    "@rollup/plugin-terser": "^0.4.0",
+    "rollup": "^3.0.0"
+  },
+  "dependencies": {
+    "cross-fetch": "^3.1.5"
+  }
+}
